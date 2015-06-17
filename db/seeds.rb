@@ -1,3 +1,13 @@
+10.times do
+  restaurant = Restaurant.new({
+    name: Faker::Company.name,
+    address: Faker::Address.street_address,
+    category: ["chinese", "italian", "japanese", "french", "belgian"].sample,
+    phone_number: Faker::PhoneNumber.phone_number
+  })
+  restaurant.save!
+end
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
